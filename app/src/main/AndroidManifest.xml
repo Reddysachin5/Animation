@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="info.androidhive.slidingmenu"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        <activity
+            android:name=".SplashScreenActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity
+            android:name="info.androidhive.slidingmenu.MainActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="info.androidhive.slidingmenu.LoginActivity"
+            android:label="@string/app_name" >
+        <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name="info.androidhive.slidingmenu.TrailRoot"
+            android:label="@string/app_name"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+ />
+    </intent-filter>
+        </activity>
+        <activity
+            android:name=".DetailsActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".TrailRoot">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TrailRoot" />
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
